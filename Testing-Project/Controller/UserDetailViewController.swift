@@ -9,7 +9,9 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
     
+    //MARK:- Variables
     var user: User?
+    
     //MARK:- IBOutlets
     @IBOutlet weak var userProfleImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -18,8 +20,9 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var profileURL: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var siteAdminLabel: UILabel!
-    
     @IBOutlet weak var reposURL: UILabel!
+    
+    //MARK:- Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +33,7 @@ class UserDetailViewController: UIViewController {
     }
     
 
+    //MARK:- Configuration function
     func configureDetails(_ user: User) {
         
         userNameLabel.text = user.login
@@ -56,15 +60,5 @@ class UserDetailViewController: UIViewController {
         
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -9,11 +9,13 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
     
+    //MARK:- IBOutlets
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     
     
+    //MARK:- Lifecycle methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +27,7 @@ class UserTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK:- Configuration function
     func configure(user: User) {
         userName.text = user.login
         idLabel.text = "id: \(user.id)"
